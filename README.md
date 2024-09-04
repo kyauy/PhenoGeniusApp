@@ -58,7 +58,7 @@ Enjoy !
 
 ## Command line interface
 
-The command line interface is available in the PhenoGenius client repository (https://github.com/kyauy/PhenoGenius/)[https://github.com/kyauy/PhenoGenius/].
+The command line interface is available in the PhenoGenius client repository [https://github.com/kyauy/PhenoGenius/](https://github.com/kyauy/PhenoGenius/).
 
 ## License
 
