@@ -117,7 +117,7 @@ def load_topic_data():
 
 @st.cache_data(hash_funcs={"_json.Scanner": hash}, max_entries=50)
 def load_similarity_dict():
-    with open("data/resources/similarity_dict_threshold_80.json") as json_data:
+    with open("data/resources/similarity_dict_threshold_80_2024.json") as json_data:
         data_dict = json.load(json_data)
     return data_dict
 
@@ -390,7 +390,8 @@ if submit_button:
                 key="download-csv-proj",
             )
 
-        sim_dict, hpo_list_add = get_similar_terms(hpo_list, similarity_terms_dict)
+        sim_dict, hpo_list_add_raw = get_similar_terms(hpo_list, similarity_terms_dict)
+        hpo_list_add = list(set(hpo_list_add_raw) & set(data.columns.tolist()))
         similar_list = list(set(hpo_list_add) - set(hpo_list))
         similar_list_desc = get_hpo_name_list(similar_list, hp_onto)
 
